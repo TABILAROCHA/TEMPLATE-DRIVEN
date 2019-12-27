@@ -1,0 +1,89 @@
+<div layout="column" layout-fill>
+    <div align="center" layout="row" layout-align="center center">
+
+      <mat-card class="info-card mat-elevation-z8" flex="80" style="margin-top: 60px;width: 800px;;">
+
+        <mat-card-title></mat-card-title>
+        <mat-card-subtitle>
+        </mat-card-subtitle>
+
+        <mat-card-content fxLayout="column" fxLayoutAlign="stretch" >
+
+          <form fxLayout="column" fxLayoutAlign="start stretch">
+
+            <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start">
+              <mat-form-field fxFlex="45" >
+                <input matInput type="text" class="form-control" value="" placeholder="Nome" >
+              </mat-form-field>
+              <mat-form-field fxFlex="45">
+                <input matInput type="text" class="form-control" value="" placeholder="SobreNome" >
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start">
+
+              <mat-form-field fxFlex="45">
+                <input matInput  [matDatepicker]="Ddn" placeholder="Data de Nascimento">
+                <mat-datepicker-toggle matSuffix [for]="Ddn"></mat-datepicker-toggle>
+                <mat-datepicker #Ddn></mat-datepicker>
+              </mat-form-field>
+
+              <mat-radio-group  fxFlex="45" fxLayout="column" fxLayoutAlign="space-between start" >
+                <mat-radio-button value="Masculino" checked>Masculino</mat-radio-button>
+                <mat-radio-button value="Feminino">Feminino</mat-radio-button>
+              </mat-radio-group>
+
+            </div>
+
+            <div fxFlex="100" fxLayoutAlign="start">
+                <h4>Endereço:</h4>
+            </div>
+            <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between start">
+              <mat-form-field fxFlex="40" >
+                <input matInput type="text"
+                  class="form-control" value="" placeholder="Local" >
+              </mat-form-field>
+              <mat-form-field fxFlex="30">
+                <input matInput type="text"
+                  class="form-control" value="" placeholder="Cidade" >
+              </mat-form-field>
+
+              <mat-form-field fxFlex="20">
+                <mat-select placeholder="Estado"  >
+                  <mat-option value="Option 1">RJ</mat-option>
+                  <mat-option value="Option 2">SP</mat-option>
+                  <mat-option value="Option 3">SC</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="100" fxLayoutAlign="start">
+              <h4>Contato:</h4>
+            </div>
+
+            <div fxFlex="100"  fxLayout="row wrap" fxLayoutAlign="space-between start" fxLayoutGap="20px">
+              <mat-form-field fxFlex="45" >
+                <input matInput type="text"
+                  class="form-control" value="" placeholder="Telefone 1 ">
+              </mat-form-field>
+              <mat-form-field fxFlex="45" >
+                <input matInput type="text"
+                  class="form-control" value="" placeholder="Telefone 2">
+              </mat-form-field>
+            </div>
+
+            <button mat-button color="primary" type="enviar" >
+              <mat-icon>done</mat-icon>Enviar
+            </button>
+
+          </form>
+
+        </mat-card-content>
+        <mat-card-footer>
+        </mat-card-footer>
+      </mat-card>
+
+
+    </div>
+  </div>
+
